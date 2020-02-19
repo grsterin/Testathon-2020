@@ -17,6 +17,10 @@ workflow test_call_input_block_overrides_previous_input {
 }
 
 task my_task {
+    runtime {
+        docker: "ubuntu:latest"
+    }
+
     input {
         Int my_task_int_in
     }
@@ -31,6 +35,10 @@ task my_task {
 }
 
 task some_preliminary_task {
+    runtime {
+        docker: "ubuntu:latest"
+    }
+
     command <<<
         # NOOP
     >>>

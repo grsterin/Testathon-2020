@@ -5,6 +5,10 @@ workflow test_call_input_overriden_by_workflow_input {
 }
 
 task test_call_input_overriden_by_workflow_input_task {
+    runtime {
+        docker: "ubuntu:latest"
+    }
+
     input {
         String str
     }
